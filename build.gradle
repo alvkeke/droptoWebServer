@@ -12,6 +12,8 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.45.3.0'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.9'
 }
 
 test {

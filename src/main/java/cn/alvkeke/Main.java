@@ -4,6 +4,7 @@ import cn.alvkeke.handler.CategoryHandler;
 import cn.alvkeke.handler.NotFoundHandler;
 import cn.alvkeke.handler.NoteHandler;
 import cn.alvkeke.handler.ResourceHandler;
+import cn.alvkeke.storage.DatabaseHelper;
 import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;
@@ -21,6 +22,8 @@ public class Main {
         server.createContext("/note", new NotFoundHandler());
         server.createContext("/category", new NotFoundHandler());
         server.setExecutor(null);
+
+        DatabaseHelper.createDatabase();
 
         server.start();
     }
