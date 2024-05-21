@@ -1,5 +1,6 @@
 package cn.alvkeke.handler;
 
+import cn.alvkeke.Config;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -8,6 +9,9 @@ import java.io.OutputStream;
 
 public class CategoryHandler implements HttpHandler {
 
+
+    public static final String handlerName = "category";
+    public static final String path = Config.getApiPath(handlerName);
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
