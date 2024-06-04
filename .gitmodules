@@ -1,0 +1,3 @@
+[submodule "dropto_client"]
+	path = dropto_client
+	url = git@github.com:alvkeke/dropto.git
